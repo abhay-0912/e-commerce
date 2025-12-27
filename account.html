@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | Sanskriti Traditional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Sanskriti</a>
+            <ul class="nav-menu">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="index.html#heritage">Heritage</a></li>
+                <li><a href="index.html#artisans">Artisans</a></li>
+                <li><a href="index.html#journal">Journal</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="wishlist.html" class="nav-icon" title="Wishlist">❤️</a>
+                <a href="account.html" class="nav-icon" title="Account">👤</a>
+                <a href="cart.html" class="nav-icon" title="Cart">🛒</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>My Account</span>
+        </div>
+    </div>
+
+    <main class="container dashboard-page">
+        <!-- WELCOME HEADER -->
+        <header class="dashboard-header">
+            <div>
+                <h1 id="welcomeMessage">Welcome back</h1>
+                <p>Your control room for orders, addresses, and preferences.</p>
+            </div>
+            <div class="header-actions">
+                <button id="logoutBtn" class="btn-secondary">Sign out</button>
+            </div>
+        </header>
+
+        <!-- QUICK OVERVIEW TILES -->
+        <section class="overview-tiles">
+            <a href="#orders" class="tile tap">
+                <span class="tile-icon">📦</span>
+                <div>
+                    <div class="tile-label">Orders</div>
+                    <div class="tile-count" id="orderCount">0</div>
+                </div>
+            </a>
+            <a href="#wishlist" class="tile tap">
+                <span class="tile-icon">❤️</span>
+                <div>
+                    <div class="tile-label">Wishlist</div>
+                    <div class="tile-count" id="wishlistCount">0</div>
+                </div>
+            </a>
+            <a href="#addresses" class="tile tap">
+                <span class="tile-icon">📍</span>
+                <div>
+                    <div class="tile-label">Addresses</div>
+                    <div class="tile-count" id="addressCount">0</div>
+                </div>
+            </a>
+            <a href="#profile" class="tile tap">
+                <span class="tile-icon">👤</span>
+                <div>
+                    <div class="tile-label">Profile</div>
+                    <div class="tile-count">•••</div>
+                </div>
+            </a>
+        </section>
+
+        <!-- TABS NAVIGATION -->
+        <nav class="dashboard-tabs">
+            <button class="tab-btn active" data-tab="orders">My Orders</button>
+            <button class="tab-btn" data-tab="wishlist">Wishlist</button>
+            <button class="tab-btn" data-tab="addresses">Addresses</button>
+            <button class="tab-btn" data-tab="profile">Profile</button>
+        </nav>
+
+        <!-- TAB CONTENT -->
+        <div class="dashboard-content">
+            <!-- ORDERS TAB -->
+            <section class="tab-pane active" id="orders">
+                <div class="section-header">
+                    <h2>My Orders</h2>
+                </div>
+                <div id="ordersList" class="orders-list">
+                    <p class="empty-state">No orders yet. <a href="shop.html" class="link-plain">Start shopping</a>.</p>
+                </div>
+            </section>
+
+            <!-- WISHLIST TAB -->
+            <section class="tab-pane" id="wishlist">
+                <div class="section-header">
+                    <h2>Wishlist</h2>
+                </div>
+                <div id="wishlistList" class="wishlist-grid">
+                    <p class="empty-state">Your wishlist is empty. <a href="shop.html" class="link-plain">Explore products</a>.</p>
+                </div>
+            </section>
+
+            <!-- ADDRESSES TAB -->
+            <section class="tab-pane" id="addresses">
+                <div class="section-header">
+                    <h2>Saved Addresses</h2>
+                    <button id="addAddressBtn" class="btn-secondary">+ Add address</button>
+                </div>
+                <div id="addressList" class="addresses-list">
+                    <p class="empty-state">No saved addresses. <a href="#" id="addAddressLink" class="link-plain">Add one</a>.</p>
+                </div>
+
+                <!-- Add/Edit Address Modal (Hidden) -->
+                <div id="addressModal" class="modal hidden">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="modalTitle">Add Address</h3>
+                            <button type="button" id="closeModal" class="close-btn">✕</button>
+                        </div>
+                        <form id="addressForm" class="form-grid">
+                            <label class="field">
+                                <span>Full name</span>
+                                <input type="text" name="name" placeholder="Asha Sharma" required>
+                            </label>
+                            <label class="field">
+                                <span>Phone</span>
+                                <input type="tel" name="phone" placeholder="9876543210" required>
+                            </label>
+                            <label class="field wide">
+                                <span>Address line</span>
+                                <input type="text" name="address" placeholder="House No., Street, Area" required>
+                            </label>
+                            <label class="field">
+                                <span>City</span>
+                                <input type="text" name="city" placeholder="Varanasi" required>
+                            </label>
+                            <label class="field">
+                                <span>State</span>
+                                <input type="text" name="state" placeholder="Uttar Pradesh" required>
+                            </label>
+                            <label class="field">
+                                <span>Pincode</span>
+                                <input type="text" name="pincode" placeholder="221001" required>
+                            </label>
+                            <label class="field checkbox">
+                                <input type="checkbox" name="isDefault">
+                                <span>Set as default</span>
+                            </label>
+                            <div class="modal-actions">
+                                <button type="submit" id="saveAddressBtn" class="btn-primary">Save address</button>
+                                <button type="button" id="deleteAddressBtn" class="btn-secondary" style="display:none;">Delete</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROFILE TAB -->
+            <section class="tab-pane" id="profile">
+                <div class="section-header">
+                    <h2>Profile & Security</h2>
+                </div>
+                <div class="profile-card">
+                    <div class="form-group">
+                        <label class="field">
+                            <span>Full name</span>
+                            <input type="text" id="profileName" placeholder="Your name" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="field">
+                            <span>Email or phone</span>
+                            <input type="text" id="profileIdentifier" readonly>
+                        </label>
+                        <p class="note">Contact support to change your email or phone.</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="field">
+                            <span>Change password</span>
+                            <input type="password" id="newPassword" placeholder="New password (6+ characters)">
+                        </label>
+                    </div>
+                    <button id="saveProfileBtn" class="btn-primary">Save changes</button>
+                    <p class="form-message" id="profileMessage" aria-live="polite"></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="shop.js"></script>
+    <script src="account.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
