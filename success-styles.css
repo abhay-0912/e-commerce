@@ -1,0 +1,13 @@
+/* ==================== ORDER SUCCESS ==================== */
+.success-page { padding: 3rem 0 4rem; display: flex; justify-content: center; }
+.success-card { max-width: 720px; width: 100%; background: var(--bg-white); border: 1px solid var(--border-color); border-radius: 18px; padding: 2rem; box-shadow: 0 12px 40px rgba(0,0,0,.05); text-align: center; }
+.success-icon { font-size: 3rem; }
+.success-card h1 { font-family: 'Playfair Display', serif; color: var(--accent-color); margin: .5rem 0 1rem; }
+.subtext { color: var(--text-light); }
+.actions { display: flex; gap: .8rem; justify-content: center; margin-top: 1.2rem; }
+
+.order-details { text-align: left; margin-top: 1rem; }
+.order-row { display: flex; justify-content: space-between; padding: .5rem 0; }
+.order-row.total { border-top: 1px dashed var(--border-color); margin-top: .4rem; padding-top: .7rem; font-weight: 700; }
+.item-list { display: flex; flex-direction: column; gap: .6rem; margin-top: .6rem; }
+.item-list .line { display: flex; justify-content: space-between; }
