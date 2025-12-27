@@ -11,15 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!accountLink) return;
 
   if (isLoggedIn) {
-    // Turn the Account icon into Sign out action
-    accountLink.setAttribute('title', 'Sign out');
-    accountLink.setAttribute('href', '#');
-    accountLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      signOut();
-    });
+    // When signed in: clicking Account goes to account.html; can also sign out via Account page
+    accountLink.setAttribute('title', 'Account');
+    accountLink.setAttribute('href', 'account.html');
   } else {
-    // Keep pointing to login with redirect to checkout
+    // When signed out: clicking Account goes to login with redirect to checkout
     accountLink.setAttribute('title', 'Account');
     accountLink.setAttribute('href', 'login.html?redirect=checkout.html');
   }
@@ -30,13 +26,8 @@ function signOut() {
     localStorage.removeItem(AUTH_STORAGE.currentUser);
   } catch {}
 
-  // Decide sensible redirect: if on checkout, go back to login for checkout; else go home
-  const path = (window.location.pathname || '').toLowerCase();
-  if (path.includes('checkout.html')) {
-    window.location.href = 'login.html?redirect=checkout.html';
-  } else {
-    window.location.href = 'index.html';
-  }
+  // Redirect to home after sign out
+  window.location.href = 'index.html';
 }
 
 // Expose for other scripts if needed
