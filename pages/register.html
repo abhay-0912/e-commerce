@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Sanskriti.Traditional</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-main"><div class="container"><div class="flex justify-between items-center">
+                    <a href="../index.html" class="logo">Sanskriti<span class="logo-accent">.Traditional</span></a>
+                </div></div></div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="max-w-md" style="margin: 0 auto;">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-lg">Create Account</h1>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-input" placeholder="+91 1234567890" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Create password" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="password" class="form-input" placeholder="Confirm password" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="flex items-center gap-sm" style="cursor: pointer;">
+                                    <input type="checkbox" class="form-checkbox" required>
+                                    <span class="text-sm">I agree to the <a href="#" class="text-primary">Terms & Conditions</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Create Account</button>
+                        </form>
+                        <div class="decorative-border my-lg"></div>
+                        <p class="text-center text-muted">Already have an account? <a href="login.html" class="text-primary font-semibold">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom"><div class="container"><p class="text-center">&copy; 2025 Sanskriti.Traditional</p></div></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
+</body>
+</html>

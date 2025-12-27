@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopping Cart - Sanskriti.Traditional">
+    <title>Shopping Cart - Sanskriti.Traditional</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Sanskriti<span class="logo-accent">.Traditional</span></a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="crafts.html" class="nav-link">Crafts</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="artisans.html" class="nav-link">Artisans</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Page -->
+    <main class="cart-page">
+        <div class="container">
+            <!-- Cart Header -->
+            <div class="cart-header">
+                <h1 class="cart-title">Shopping Cart</h1>
+                <p class="cart-subtitle" id="itemCount">Loading cart...</p>
+            </div>
+
+            <!-- Empty Cart State -->
+            <div id="emptyCart" class="empty-cart" style="display: none;">
+                <div class="empty-cart-icon">🛒</div>
+                <h2 class="empty-cart-title">Your Cart is Empty</h2>
+                <p class="empty-cart-text">Add some beautiful handcrafted items to your cart</p>
+                <a href="shop.html" class="btn-shop">Start Shopping</a>
+            </div>
+
+            <!-- Cart Layout -->
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cartSummary" style="display: none;">
+                    <h2 class="summary-title">Order Summary</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span class="price" id="subtotal">₹0</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span class="price" id="shipping">₹0</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span class="price" id="total">₹0</span>
+                    </div>
+                    
+                    <button class="btn-checkout" onclick="proceedToCheckout()">
+                        Proceed to Checkout
+                    </button>
+                    
+                    <a href="shop.html" class="continue-shopping">← Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">Our Story</a>
+                        <a href="artisans.html" class="footer-link">Meet Artisans</a>
+                        <a href="authenticity.html" class="footer-link">Authenticity</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <div class="footer-links">
+                        <a href="crafts.html" class="footer-link">All Crafts</a>
+                        <a href="shop.html" class="footer-link">Products</a>
+                        <a href="cart.html" class="footer-link">Cart</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                        <a href="#" class="footer-link">Shipping Info</a>
+                        <a href="#" class="footer-link">Returns</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Facebook</a>
+                        <a href="#" class="footer-link">Instagram</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sanskriti.Traditional. All rights reserved. Celebrating Indian Heritage.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
+    
+    <!-- Cart Script -->
+    <script src="../assets/js/cart-page.js"></script>
+</body>
+</html>
+    <header class="header">
+        <div class="header-top"><div class="container"><div class="flex justify-between items-center"><p class="text-sm">✨ Celebrating Authentic Indian Craftsmanship</p></div></div></div>
+        <div class="header-main"><div class="container"><div class="flex justify-between items-center gap-lg">
+                    <a href="../index.html" class="logo">Sanskriti<span class="logo-accent">.Traditional</span></a>
+                    <div class="header-actions">
+                        <a href="login.html" class="header-action"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
+                        <a href="cart.html" class="header-action active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-badge">2</span></a>
+                        <button class="menu-toggle"><span></span><span></span><span></span></button>
+                    </div>
+                    <nav class="nav"><ul class="nav-list">
+                            <li><a href="../index.html" class="nav-link">Home</a></li>
+                            <li><a href="shop.html" class="nav-link">Shop</a></li>
+                            <li><a href="about.html" class="nav-link">About</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        </ul></nav>
+                </div></div></div>
+    </header>
+    <div class="mobile-overlay"></div>
+
+    <div class="container"><div class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+            <span class="breadcrumb-item active">Shopping Cart</span>
+        </div></div>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="mb-xl">Shopping Cart</h1>
+            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: var(--space-3xl);">
+                <!-- Cart Items -->
+                <div>
+                    <div class="card mb-lg">
+                        <div class="card-body">
+                            <div class="flex gap-lg" style="align-items: flex-start;">
+                                <div style="background: var(--color-gray-light); width: 120px; height: 120px; border-radius: var(--radius-md); flex-shrink: 0;"></div>
+                                <div style="flex: 1;">
+                                    <h3 class="mb-sm">Handwoven Silk Saree</h3>
+                                    <p class="text-sm text-muted mb-md">Banarasi Craft</p>
+                                    <div class="flex items-center gap-md mb-md">
+                                        <button class="btn btn-outline btn-sm">-</button>
+                                        <span class="font-semibold">1</span>
+                                        <button class="btn btn-outline btn-sm">+</button>
+                                    </div>
+                                    <button class="text-sm text-primary">Remove</button>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-bold text-xl">₹12,500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-lg">
+                        <div class="card-body">
+                            <div class="flex gap-lg" style="align-items: flex-start;">
+                                <div style="background: var(--color-gray-light); width: 120px; height: 120px; border-radius: var(--radius-md); flex-shrink: 0;"></div>
+                                <div style="flex: 1;">
+                                    <h3 class="mb-sm">Blue Pottery Vase</h3>
+                                    <p class="text-sm text-muted mb-md">Jaipur Pottery</p>
+                                    <div class="flex items-center gap-md mb-md">
+                                        <button class="btn btn-outline btn-sm">-</button>
+                                        <span class="font-semibold">2</span>
+                                        <button class="btn btn-outline btn-sm">+</button>
+                                    </div>
+                                    <button class="text-sm text-primary">Remove</button>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-bold text-xl">₹5,600</p>
+                                    <p class="text-sm text-muted">₹2,800 each</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-md">
+                        <a href="shop.html" class="btn btn-outline">Continue Shopping</a>
+                        <button class="btn btn-outline text-primary">Clear Cart</button>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mb-lg">Order Summary</h3>
+                            <div class="flex justify-between mb-md">
+                                <span class="text-muted">Subtotal</span>
+                                <span class="font-semibold">₹18,100</span>
+                            </div>
+                            <div class="flex justify-between mb-md">
+                                <span class="text-muted">Shipping</span>
+                                <span class="font-semibold">₹150</span>
+                            </div>
+                            <div class="flex justify-between mb-md">
+                                <span class="text-muted">Tax (GST 18%)</span>
+                                <span class="font-semibold">₹3,258</span>
+                            </div>
+                            <div class="decorative-border my-md"></div>
+                            <div class="flex justify-between mb-xl">
+                                <span class="font-bold text-lg">Total</span>
+                                <span class="font-bold text-xl text-primary">₹21,508</span>
+                            </div>
+                            <a href="checkout.html" class="btn btn-primary btn-lg btn-block">Proceed to Checkout</a>
+                            <div class="mt-md">
+                                <label class="form-label">Have a Coupon?</label>
+                                <div class="flex gap-sm">
+                                    <input type="text" class="form-input" placeholder="Enter code">
+                                    <button class="btn btn-outline">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-lg">
+                        <div class="card-body">
+                            <h4 class="mb-md">We Accept</h4>
+                            <div class="flex gap-sm" style="flex-wrap: wrap;">
+                                <span class="payment-icon">VISA</span>
+                                <span class="payment-icon">MC</span>
+                                <span class="payment-icon">UPI</span>
+                                <span class="payment-icon">PayPal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-main"><div class="container"><div class="footer-grid">
+                    <div class="footer-section"><h4>Sanskriti.Traditional</h4><p>Celebrating India's rich heritage.</p></div>
+                </div></div></div>
+        <div class="footer-bottom"><div class="container"><p>&copy; 2025 Sanskriti.Traditional. All rights reserved.</p></div></div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+</body>
+</html>

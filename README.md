@@ -47,7 +47,209 @@ e-commerce/
 ├── index.html          # Main HTML file with all sections
 ├── styles.css          # Complete styling with Indian design language
 ├── script.js           # Interactive features and animations
-└── README.md           # Project documentation
+└── # Sanskriti.Traditional - E-Commerce Website
+
+A cultural e-commerce platform celebrating authentic Indian handicrafts and supporting artisan communities.
+
+## 🎨 Project Overview
+
+**Sanskriti.Traditional** is a fully responsive, heritage-inspired e-commerce website showcasing authentic Indian handicrafts. Built with semantic HTML5, modular CSS, and vanilla JavaScript, it provides an elegant and user-friendly shopping experience.
+
+## ✨ Features
+
+### Core Functionality
+- **Product Catalog**: Browse authentic Indian handicrafts
+- **Shopping Cart**: Add/remove items, update quantities
+- **Checkout Process**: Complete order flow with form validation
+- **User Authentication**: Login and registration system
+- **Responsive Design**: Mobile-first approach, works on all devices
+- **Search Functionality**: Find products and artisans
+- **Newsletter Subscription**: Stay updated with new arrivals
+
+### Pages Included
+1. **Home** (`index.html`) - Hero section, featured products, testimonials
+2. **Shop** (`pages/shop.html`) - Product grid with filters
+3. **Product Detail** (`pages/product-detail.html`) - Detailed product view with artisan story
+4. **Cart** (`pages/cart.html`) - Shopping cart management
+5. **Checkout** (`pages/checkout.html`) - Order completion
+6. **Crafts** (`pages/crafts.html`) - Explore craft traditions
+7. **Craft Detail** (`pages/craft-detail.html`) - Individual craft information
+8. **Artisans** (`pages/artisans.html`) - Meet the craftspeople
+9. **Authenticity** (`pages/authenticity.html`) - Quality guarantee information
+10. **Blog** (`pages/blog.html`) - Stories and insights
+11. **About** (`pages/about.html`) - Company information
+12. **Contact** (`pages/contact.html`) - Get in touch
+13. **Login** (`pages/login.html`) - User authentication
+14. **Register** (`pages/register.html`) - New user registration
+
+## 📁 Project Structure
+
+```
+e-commerce/
+├── index.html                 # Home page
+├── README.md                  # Project documentation
+├── assets/
+│   ├── css/
+│   │   ├── reset.css         # CSS reset
+│   │   ├── variables.css     # Design tokens & CSS variables
+│   │   ├── typography.css    # Typography styles
+│   │   ├── layout.css        # Layout utilities
+│   │   ├── components.css    # Reusable components
+│   │   ├── header.css        # Header styles
+│   │   └── footer.css        # Footer styles
+│   ├── js/
+│   │   ├── main.js           # Core functionality
+│   │   ├── product.js        # Product detail interactions
+│   │   ├── cart.js           # Shopping cart logic
+│   │   ├── checkout.js       # Checkout form handling
+│   │   └── auth.js           # Authentication logic
+│   └── images/               # Product and UI images
+├── components/
+│   ├── header.html           # Header component
+│   └── footer.html           # Footer component
+└── pages/
+    ├── shop.html
+    ├── product-detail.html
+    ├── cart.html
+    ├── checkout.html
+    ├── crafts.html
+    ├── craft-detail.html
+    ├── artisans.html
+    ├── authenticity.html
+    ├── blog.html
+    ├── about.html
+    ├── contact.html
+    ├── login.html
+    └── register.html
+```
+
+## 🎨 Design System
+
+### Color Palette (Indian Heritage-Inspired)
+- **Primary**: Deep Red (`#C8102E`) - Traditional Indian Red
+- **Secondary**: Golden (`#D4AF37`) - Temple Gold
+- **Accent**: Saffron (`#FF9933`)
+- **Accent Green**: Indian Green (`#138808`)
+- **Neutrals**: Cream, Beige, Gray shades
+
+### Typography
+- **Primary Font**: Poppins (sans-serif)
+- **Secondary Font**: Crimson Text (serif)
+
+### Key Features
+- Clean, elegant layouts
+- Indian heritage-inspired color scheme
+- Mobile-first responsive design
+- Modular and maintainable code
+- Semantic HTML5
+- Accessible UI elements
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- No build tools required - pure HTML, CSS, and vanilla JavaScript
+
+### Installation
+
+1. **Clone or download** the repository
+2. **Open** `index.html` in your web browser
+3. **Navigate** through the site using the menu
+
+### Local Development
+
+Simply open the HTML files in your browser. For a better development experience, you can use:
+
+```bash
+# Using Python's built-in server
+python -m http.server 8000
+
+# Using Node.js http-server
+npx http-server
+
+# Using VS Code Live Server extension
+# Right-click on index.html → Open with Live Server
+```
+
+Then visit `http://localhost:8000` in your browser.
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1023px
+- **Desktop**: ≥ 1024px
+
+## 🎯 Key Functionalities
+
+### Shopping Cart
+- Add/remove products
+- Update quantities
+- Persistent cart using localStorage
+- Real-time total calculations
+- Coupon code support
+
+### User Authentication
+- Login/Register forms
+- Form validation
+- Session management
+- Password visibility toggle
+
+### Product Features
+- Image gallery
+- Quantity selector
+- Wishlist functionality
+- Related products
+- Artisan stories
+
+## 🔧 Customization
+
+### Changing Colors
+Edit `assets/css/variables.css` to modify the color scheme:
+
+```css
+:root {
+    --color-primary: #YourColor;
+    --color-secondary: #YourColor;
+    /* ... */
+}
+```
+
+### Adding Products
+Products are currently static. To add dynamic products:
+1. Create a `products.json` file
+2. Update JavaScript to fetch and render products
+3. Implement backend API integration
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📄 License
+
+This project is created for educational purposes. Feel free to use and modify.
+
+## 🤝 Contributing
+
+Contributions are welcome! Areas for improvement:
+- Add real product data
+- Implement backend integration
+- Add payment gateway
+- Enhance accessibility
+- Add more animations
+- Implement wishlist feature
+- Add product reviews
+
+## 📧 Contact
+
+For questions or suggestions, please reach out through the contact page.
+
+---
+
+**Built with ❤️ for celebrating Indian heritage and supporting artisan communities.**           # Project documentation
 ```
 
 ## 🔧 Technologies Used

@@ -1,0 +1,278 @@
+/* Artisans Page Styles */
+
+.artisans-page {
+    padding: var(--space-2xl) 0;
+}
+
+.artisans-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.artisans-title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.artisans-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-dark);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Artisans Grid */
+.artisans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
+}
+
+/* Artisan Card */
+.artisan-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.artisan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.artisan-photo {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-cream) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.artisan-photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 120%, rgba(200, 16, 46, 0.05) 0%, transparent 60%);
+}
+
+.artisan-emoji {
+    font-size: 6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.artisan-badge {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    background: var(--color-secondary);
+    color: var(--color-black);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+}
+
+.artisan-badge.master {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.artisan-content {
+    padding: var(--space-xl);
+}
+
+.artisan-name {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: var(--space-xs);
+    font-family: var(--font-secondary);
+}
+
+.artisan-specialty {
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.artisan-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-gray-light);
+}
+
+.artisan-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-gray-dark);
+    font-size: var(--font-size-sm);
+}
+
+.info-icon {
+    font-size: var(--font-size-lg);
+    width: 24px;
+    text-align: center;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--color-gray-dark);
+}
+
+/* Quote Section */
+.artisan-quote {
+    position: relative;
+    padding: var(--space-md);
+    background: var(--color-cream);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-secondary);
+}
+
+.quote-icon {
+    font-size: var(--font-size-2xl);
+    color: var(--color-secondary);
+    opacity: 0.3;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+.quote-text {
+    font-style: italic;
+    color: var(--color-gray-dark);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Stats Section */
+.artisan-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+    background: var(--color-beige);
+    border-radius: var(--radius-md);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray);
+}
+
+/* Impact Section */
+.impact-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #A00D25 100%);
+    color: var(--color-white);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin-top: var(--space-3xl);
+}
+
+.impact-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+    color: var(--color-white);
+}
+
+.impact-text {
+    max-width: 700px;
+    margin: 0 auto var(--space-xl);
+    line-height: 1.8;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-xl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.impact-stat {
+    text-align: center;
+}
+
+.impact-stat-value {
+    display: block;
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.impact-stat-label {
+    font-size: var(--font-size-base);
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .artisans-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .artisans-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .artisan-photo {
+        height: 240px;
+    }
+    
+    .artisan-emoji {
+        font-size: 5rem;
+    }
+    
+    .artisan-content {
+        padding: var(--space-lg);
+    }
+    
+    .artisans-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .impact-section {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}

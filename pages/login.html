@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Sanskriti.Traditional">
+    <title>Login - Sanskriti.Traditional</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Sanskriti<span class="logo-accent">.Traditional</span></a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="crafts.html" class="nav-link">Crafts</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="artisans.html" class="nav-link">Artisans</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Container -->
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1 class="auth-title">Welcome Back</h1>
+                <p class="auth-subtitle">Login to your account</p>
+            </div>
+
+            <!-- Login Form -->
+            <form class="auth-form" id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        class="form-input" 
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        class="form-input" 
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                    >
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+
+            <!-- Footer Links -->
+            <div class="auth-footer">
+                <p style="color: var(--color-gray);">
+                    Don't have an account? 
+                    <a href="register.html" class="auth-link">Register here</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">Our Story</a>
+                        <a href="artisans.html" class="footer-link">Meet Artisans</a>
+                        <a href="authenticity.html" class="footer-link">Authenticity</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <div class="footer-links">
+                        <a href="crafts.html" class="footer-link">All Crafts</a>
+                        <a href="shop.html" class="footer-link">Products</a>
+                        <a href="cart.html" class="footer-link">Cart</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                        <a href="#" class="footer-link">Shipping Info</a>
+                        <a href="#" class="footer-link">Returns</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Facebook</a>
+                        <a href="#" class="footer-link">Instagram</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sanskriti.Traditional. All rights reserved. Celebrating Indian Heritage.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
+    
+    <!-- Login Script -->
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>
