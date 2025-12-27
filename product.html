@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Sanskriti Traditional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Sanskriti</a>
+            <ul class="nav-menu">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="index.html#artisans">Artisans</a></li>
+                <li><a href="index.html#heritage">Heritage</a></li>
+                <li><a href="index.html#journal">Journal</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="nav-icon" title="Wishlist">❤️</a>
+                <a href="#" class="nav-icon" title="Account">👤</a>
+                <a href="#" class="nav-icon" title="Cart">🛒</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="shop.html">Shop</a>
+            <span>/</span>
+            <span id="breadcrumbProduct">Product</span>
+        </div>
+    </div>
+
+    <!-- MAIN PRODUCT SECTION -->
+    <main class="container product-page">
+        <!-- 1️⃣ PRODUCT GALLERY + INFO -->
+        <div class="product-main">
+            <!-- LEFT: GALLERY -->
+            <div class="product-gallery">
+                <div class="main-image-container">
+                    <div class="main-image" id="mainImage">
+                        <span id="mainEmoji" style="font-size: 6rem;">👗</span>
+                    </div>
+                    <button class="zoom-btn" id="zoomBtn">🔍 Zoom</button>
+                </div>
+                <div class="gallery-thumbnails">
+                    <!-- Thumbnails will be generated dynamically -->
+                </div>
+                <p class="gallery-note">✨ Each piece is handcrafted and unique</p>
+            </div>
+
+            <!-- RIGHT: PRODUCT INFO -->
+            <div class="product-info">
+                <!-- Breadcrumb for mobile -->
+                <div class="product-breadcrumb-mobile">
+                    <a href="shop.html">← Back to Shop</a>
+                </div>
+
+                <!-- PRODUCT HEADER -->
+                <div class="product-header">
+                    <div class="product-meta">
+                        <span id="productRegion" class="product-region">Varanasi</span>
+                        <span class="product-separator">•</span>
+                        <span id="productCraft" class="product-craft">Banarasi Silk</span>
+                    </div>
+                    <h1 id="productName" class="product-name">Royal Blue Banarasi Saree</h1>
+                </div>
+
+                <!-- RATING -->
+                <div class="product-rating-section">
+                    <div class="rating-stars">
+                        <span class="stars">★★★★★</span>
+                        <span id="productRating" class="rating-value">4.9</span>
+                    </div>
+                    <a href="#reviews" class="reviews-link"><span id="productReviews">128</span> customer reviews</a>
+                </div>
+
+                <!-- AUTHENTICITY NOTE -->
+                <div class="authenticity-note">
+                    <span class="note-icon">✓</span>
+                    <p id="productAuthenticity">Handwoven on traditional looms using 100% silk threads</p>
+                </div>
+
+                <!-- PRICE -->
+                <div class="product-price-section">
+                    <span id="productPrice" class="product-price">₹8,500</span>
+                    <span class="price-note">Price does not include shipping</span>
+                </div>
+
+                <!-- 3️⃣ VARIANTS & OPTIONS -->
+                <div class="variants-section" id="variantsSection" style="display: none;">
+                    <h3 class="variants-title">Available Options</h3>
+                    <div class="variant-group" id="variantsContainer">
+                        <!-- Options will be generated dynamically -->
+                    </div>
+                </div>
+
+                <!-- ACTION BUTTONS -->
+                <div class="product-actions">
+                    <button class="btn-cart" id="addToCartBtn">
+                        <span>🛒</span>
+                        <span>Add to Cart</span>
+                    </button>
+                    <button class="btn-wishlist" id="addToWishlistBtn">
+                        <span>❤️</span>
+                        <span>Save to Wishlist</span>
+                    </button>
+                </div>
+
+                <!-- QUICK INFO -->
+                <div class="quick-info">
+                    <div class="info-item">
+                        <span class="info-icon">📦</span>
+                        <span class="info-text">Ships within 2-3 days</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">↩️</span>
+                        <span class="info-text">7-day returns accepted</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🔒</span>
+                        <span class="info-text">100% authentic guarantee</span>
+                    </div>
+                </div>
+
+                <!-- SHARE -->
+                <div class="share-section">
+                    <p>Share this craft:</p>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn">📱 Share</a>
+                        <a href="#" class="share-btn">📧 Email</a>
+                        <a href="#" class="share-btn">🔗 Copy Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4️⃣ CRAFT STORY SECTION -->
+        <section class="craft-story">
+            <div class="story-header">
+                <h2>The Craft Story 🪔</h2>
+            </div>
+            <div class="story-content">
+                <div class="story-text">
+                    <p id="storyDescription">
+                        This Banarasi saree was crafted using techniques passed down through generations of master weavers in Varanasi. Each saree tells the story of countless hours of meticulous handwork, traditional knowledge, and artistic vision.
+                    </p>
+                    <div class="craft-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Time to Create</span>
+                            <span class="detail-value" id="craftTime">18 days</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Technique</span>
+                            <span class="detail-value" id="craftTechnique">Handweaving on traditional looms</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Cultural Significance</span>
+                            <span class="detail-value" id="craftSignificance">Symbol of elegance and tradition in Indian culture</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Materials</span>
+                            <span class="detail-value" id="craftMaterials">100% silk with gold zari work</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <div style="background: linear-gradient(135deg, #8b4789 0%, #4a2454 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                        <span style="font-size: 5rem;">👩‍🎨</span>
+                    </div>
+                    <p class="image-caption">Artisan at work in Varanasi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5️⃣ ARTISAN INFO CARD -->
+        <section class="artisan-card-section">
+            <h2>Meet the Artisan</h2>
+            <div class="artisan-card">
+                <div class="artisan-avatar">
+                    <span style="font-size: 4rem;">👩‍🎨</span>
+                </div>
+                <div class="artisan-details">
+                    <h3 id="artisanName">Priya Sharma</h3>
+                    <p class="artisan-role">Master Weaver</p>
+                    <div class="artisan-info-grid">
+                        <div class="artisan-info-item">
+                            <span class="info-label">Region</span>
+                            <span id="artisanRegion" class="info-value">Varanasi, Uttar Pradesh</span>
+                        </div>
+                        <div class="artisan-info-item">
+                            <span class="info-label">Years of Experience</span>
+                            <span id="artisanExperience" class="info-value">22 years</span>
+                        </div>
+                        <div class="artisan-info-item">
+                            <span class="info-label">Specialty</span>
+                            <span id="artisanSpecialty" class="info-value">Banarasi Silk Weaving</span>
+                        </div>
+                    </div>
+                    <p id="artisanQuote" class="artisan-quote">"Every thread that passes through my loom carries the legacy of my family. This is not just work—this is our heritage."</p>
+                    <a href="artisans.html" class="btn-artisan-profile">👥 View Artisan Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6️⃣ CARE & AUTHENTICITY -->
+        <section class="care-authenticity">
+            <div class="ca-container">
+                <!-- CARE INSTRUCTIONS -->
+                <div class="care-section">
+                    <h3>Care Instructions 🧼</h3>
+                    <div class="care-content">
+                        <div class="care-item">
+                            <span class="care-icon">🚫</span>
+                            <div>
+                                <h4>Do NOT Machine Wash</h4>
+                                <p>This delicate handwoven fabric requires gentle hand washing only.</p>
+                            </div>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-icon">💧</span>
+                            <div>
+                                <h4>Cold Water Wash</h4>
+                                <p>Use lukewarm water with mild detergent. Soak for 10-15 minutes maximum.</p>
+                            </div>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-icon">☀️</span>
+                            <div>
+                                <h4>Dry in Shade</h4>
+                                <p>Never use direct sunlight. Air dry naturally in a cool, shaded area.</p>
+                            </div>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-icon">🧵</span>
+                            <div>
+                                <h4>Iron on Low Heat</h4>
+                                <p>If needed, iron on the reverse side with silk-appropriate settings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NATURAL VARIATIONS & AUTHENTICITY -->
+                <div class="authenticity-section">
+                    <h3>Authenticity & Natural Variations ✓</h3>
+                    <div class="authenticity-content">
+                        <div class="auth-item">
+                            <h4>🎨 Natural Color Variations</h4>
+                            <p>Handwoven fabrics may have natural variations in color and weave density. This is proof of authenticity, not a flaw.</p>
+                        </div>
+                        <div class="auth-item">
+                            <h4>✋ Handmade Imperfections</h4>
+                            <p>Each piece is unique. Small irregularities in pattern or weave are characteristics of handcraftsmanship.</p>
+                        </div>
+                        <div class="auth-item">
+                            <h4>🔍 Authenticity Guarantee</h4>
+                            <p>This product comes with our 100% authenticity guarantee. We work directly with artisans and guarantee every piece is handcrafted.</p>
+                        </div>
+                        <div class="auth-item">
+                            <h4>↩️ Return Policy</h4>
+                            <p>Not satisfied? We accept returns within 7 days of purchase. No questions asked. Your satisfaction matters more than the sale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7️⃣ RELATED PRODUCTS -->
+        <section class="related-products">
+            <div class="section-header">
+                <h2>More from Banarasi Weaving</h2>
+                <p>Explore other handwoven treasures from Varanasi</p>
+            </div>
+            <div class="related-grid" id="relatedProductsGrid">
+                <!-- Related products will be generated dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Collections</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Learn</h4>
+                    <ul>
+                        <li><a href="index.html#journal">Journal</a></li>
+                        <li><a href="#">Care Guides</a></li>
+                        <li><a href="#">Craft Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2024 Sanskriti Traditional. All rights reserved. Handcrafted with ❤️ in India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ZOOM MODAL -->
+    <div class="zoom-modal" id="zoomModal">
+        <div class="zoom-modal-content">
+            <button class="zoom-modal-close">&times;</button>
+            <div class="zoom-image-container">
+                <span id="zoomEmoji" style="font-size: 10rem;">👗</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
