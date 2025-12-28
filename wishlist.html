@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal | Sanskriti Traditional</title>
+    <title>Your Wishlist | Sanskriti Traditional</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="journal-styles.css">
+    <link rel="stylesheet" href="wishlist-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
             </ul>
             <div class="nav-icons">
                 <a href="wishlist.html" class="nav-icon" title="Wishlist">❤️</a>
-                <a href="login.html?redirect=checkout.html" class="nav-icon" title="Account">👤</a>
+                <a href="login.html?redirect=account.html" class="nav-icon" id="accountIcon" title="Account">👤</a>
                 <a href="cart.html" class="nav-icon" title="Cart">🛒</a>
             </div>
         </div>
@@ -35,36 +35,34 @@
         <div class="container">
             <a href="index.html">Home</a>
             <span>/</span>
-            <span>Journal</span>
+            <a href="account.html">Account</a>
+            <span>/</span>
+            <span>Wishlist</span>
         </div>
     </div>
 
-    <!-- 1️⃣ JOURNAL HEADER -->
-    <section class="journal-header">
+    <!-- 1️⃣ PAGE HEADER -->
+    <section class="wishlist-header">
         <div class="container">
-            <h1>Journal</h1>
-            <p>Stories, guides, and insights from India's living craft traditions.</p>
+            <h1>Your Wishlist</h1>
+            <p>Saved pieces you may want to revisit.</p>
         </div>
     </section>
 
-    <!-- 2️⃣ CATEGORY FILTERS -->
-    <section class="journal-filters">
+    <!-- 2️⃣ WISHLIST CONTENT -->
+    <section class="wishlist-section">
         <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-category="all">All Articles</button>
-                <button class="filter-btn" data-category="guides">Craft Guides</button>
-                <button class="filter-btn" data-category="culture">Culture & History</button>
-                <button class="filter-btn" data-category="care">Care Instructions</button>
-                <button class="filter-btn" data-category="stories">Artisan Stories</button>
+            <!-- Empty State (dynamic content loaded by JS) -->
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">❤️</div>
+                <h2>Your wishlist is empty</h2>
+                <p>Save crafts you love and find them here later.</p>
+                <a href="shop.html" class="btn-explore">Explore Crafts</a>
             </div>
-        </div>
-    </section>
 
-    <!-- 3️⃣ ARTICLE GRID -->
-    <section class="journal-articles">
-        <div class="container">
-            <div class="articles-grid" id="articlesGrid">
-                <!-- Articles will be rendered here by journal.js -->
+            <!-- Wishlist Grid -->
+            <div id="wishlistGrid" class="wishlist-grid" style="display: none;">
+                <!-- Products will be rendered here by wishlist.js -->
             </div>
         </div>
     </section>
@@ -92,7 +90,7 @@
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="return-refund-policy.html">Shipping & Returns</a></li>
                         <li><a href="journal.html?category=care">Care Guide</a></li>
                     </ul>
@@ -118,8 +116,9 @@
         </div>
     </footer>
 
-    <script src="journal.js"></script>
+    <script src="shop.js"></script>
     <script src="auth.js"></script>
+    <script src="wishlist.js"></script>
     <script src="mobile.js"></script>
 </body>
 </html>

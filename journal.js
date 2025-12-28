@@ -146,7 +146,7 @@ const articlesDatabase = [
         id: 3,
         slug: 'madhubani-symbolism',
         title: 'The Symbolism of Madhubani Motifs',
-        excerpt: 'Decode the meanings behind Bihar's ancient folk painting patterns.',
+        excerpt: "'Decode the meanings behind Bihar's ancient folk painting patterns.'",
         category: 'culture',
         readTime: 7,
         date: 'Dec 5, 2024',

@@ -1,0 +1,345 @@
+/* ==================== CONTACT / SUPPORT PAGE STYLES ==================== */
+
+/* 1️⃣ CONTACT HEADER */
+.contact-header {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f1ed 100%);
+    text-align: center;
+    margin-top: var(--navbar-height);
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #3d2817;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #6b4423;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .contact-header {
+        padding: 2rem 0;
+    }
+    
+    .contact-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-header p {
+        font-size: 1rem;
+    }
+}
+
+/* 2️⃣ CONTACT OPTIONS */
+.contact-options {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.contact-option {
+    text-align: center;
+    padding: 2rem;
+    background: #faf8f5;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-option:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.option-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-option h3 {
+    font-size: 1.2rem;
+    color: #3d2817;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.contact-option a {
+    color: #8b5a3c;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-option a:hover {
+    color: #6b4423;
+    text-decoration: underline;
+}
+
+.contact-option p {
+    color: #6b4423;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.option-note {
+    color: #8b7969;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .contact-options {
+        padding: 2rem 0;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* 3️⃣ CONTACT FORM */
+.contact-form-section {
+    padding: 4rem 0;
+    background: #faf8f5;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    color: #3d2817;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: #3d2817;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.9rem;
+    border: 1px solid #d4a574;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8b5a3c;
+    box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    padding: 1rem 2rem;
+    background: #8b5a3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #6b4423;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8b7969;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 2rem 0;
+    }
+    
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 4️⃣ HELP TOPICS */
+.help-topics {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.help-topics h2 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #3d2817;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.help-card {
+    background: #faf8f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: block;
+    border: 1px solid transparent;
+}
+
+.help-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #d4a574;
+}
+
+.help-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.help-card h3 {
+    font-size: 1.2rem;
+    color: #3d2817;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.help-card p {
+    font-size: 0.95rem;
+    color: #6b4423;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .help-topics {
+        padding: 2rem 0;
+    }
+    
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 5️⃣ CLOSING REASSURANCE */
+.contact-reassurance {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #3d2817 0%, #6b4423 50%, #8b5a3c 100%);
+    text-align: center;
+}
+
+.contact-reassurance p {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .contact-reassurance {
+        padding: 2rem 0;
+    }
+    
+    .contact-reassurance p {
+        font-size: 1rem;
+    }
+}
+
+/* SUCCESS MESSAGE STYLING */
+.form-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-success.show {
+    display: block;
+}
+
+.form-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+}

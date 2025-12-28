@@ -772,6 +772,52 @@
     }
 }
 
+/* ==================== STICKY ADD TO CART BUTTON (Mobile) ==================== */
+.sticky-add-to-cart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem;
+    background: var(--bg-white);
+    border-top: 2px solid var(--border-color);
+    display: none;
+    gap: 0.5rem;
+    z-index: 500;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.btn-cart-sticky {
+    flex: 1;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.btn-cart-sticky:active {
+    transform: scale(0.98);
+    background: var(--accent-color);
+}
+
 @media (max-width: 480px) {
     .product-name {
         font-size: 1.5rem;
@@ -791,6 +837,8 @@
     .btn-wishlist {
         flex-direction: column;
         font-size: 0.9rem;
+        padding: 1rem;
+        min-height: 48px;
     }
 
     .share-buttons {
@@ -804,5 +852,9 @@
     .related-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: var(--spacing-md);
+    }
+
+    .product-page {
+        padding-bottom: 5rem;
     }
 }

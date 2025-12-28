@@ -96,6 +96,26 @@ function placeOrder(user, cart) {
     }
   }
 
+  // Validate phone (10 digits)
+  const phone = form.phone.value.trim().replace(/\D/g, '');
+  if (phone.length !== 10 || !phone.match(/^\d{10}$/)) {
+    form.phone.focus();
+    return showMessage(msgEl, 'Please enter a valid 10-digit phone number.', 'error');
+  }
+
+  // Validate PIN (6 digits in India)
+  const pincode = form.pincode.value.trim().replace(/\D/g, '');
+  if (pincode.length !== 6 || !pincode.match(/^\d{6}$/)) {
+    form.pincode.focus();
+    return showMessage(msgEl, 'Please enter a valid 6-digit PIN code.', 'error');
+  }
+
+  // Check terms acceptance
+  const agreeTerms = document.getElementById('agreeTerms');
+  if (!agreeTerms.checked) {
+    return showMessage(msgEl, 'Please agree to the Terms & Conditions and Privacy Policy.', 'error');
+  }
+
   // Payment method
   const payment = document.querySelector('input[name="payment"]:checked')?.value || 'cod';
 

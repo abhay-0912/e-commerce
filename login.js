@@ -57,6 +57,14 @@ function handleContinueEmail() {
         return showMessage(messageEl, 'Please enter your email or phone to continue.', 'error');
     }
 
+    // Validate email or phone format
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identifier);
+    const isValidPhone = /^\d{10}$/.test(identifier.replace(/\D/g, ''));
+    
+    if (!isValidEmail && !isValidPhone) {
+        return showMessage(messageEl, 'Please enter a valid email or 10-digit phone number.', 'error');
+    }
+
     currentIdentifier = identifier;
     const users = getUsers();
     const user = users.find(u => normalize(u.identifier) === normalize(identifier));
