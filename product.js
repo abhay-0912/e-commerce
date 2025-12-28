@@ -174,6 +174,15 @@ function updateCraftStory(product) {
 
 // ==================== UPDATE ARTISAN INFO ==================== //
 function updateArtisanInfo(product) {
+    // Map products to artisan IDs from artisans.js
+    const productToArtisanId = {
+        1: 1,  // Banarasi Saree -> Asha Sharma
+        4: 2,  // Chikankari -> Rajesh Kumar
+        7: 3,  // Madhubani -> Priya Devi
+        10: 4, // Terracotta -> Deepak Singh
+        13: 5  // Pashmina -> Meera Nair
+    };
+
     const artisanData = {
         1: { name: "Priya Sharma", region: "Varanasi, Uttar Pradesh", experience: "22 years", specialty: "Banarasi Silk Weaving", quote: "Every thread that passes through my loom carries the legacy of my family. This is not just work—this is our heritage." },
         4: { name: "Kavya Nair", region: "Lucknow, Uttar Pradesh", experience: "18 years", specialty: "Chikankari Embroidery", quote: "The delicacy of Chikankari is not just in the stitches, but in the patience and love we pour into each creation." },
@@ -183,12 +192,19 @@ function updateArtisanInfo(product) {
     };
 
     const artisan = artisanData[product.id] || artisanData[1];
+    const artisanId = productToArtisanId[product.id] || 1;
 
     document.getElementById('artisanName').textContent = artisan.name;
     document.getElementById('artisanRegion').textContent = artisan.region;
     document.getElementById('artisanExperience').textContent = artisan.experience;
     document.getElementById('artisanSpecialty').textContent = artisan.specialty;
     document.getElementById('artisanQuote').textContent = `"${artisan.quote}"`;
+    
+    // Update artisan profile link with artisanId parameter
+    const profileLink = document.getElementById('artisanProfileLink');
+    if (profileLink) {
+        profileLink.href = `artisans.html?artisanId=${artisanId}`;
+    }
 }
 
 // ==================== LOAD RELATED PRODUCTS ==================== //

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('orderDetails');
   if (!order) {
     container.innerHTML = '<p>No recent order found. If you just placed one, it will appear here.</p>';
+    document.getElementById('trackOrderLink').style.display = 'none';
     return;
   }
 
@@ -22,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="order-row total"><span>Total</span><strong>${order.total}</strong></div>
     <div class="item-list">${itemLines}</div>
   `;
+
+  // Wire track order button
+  document.getElementById('trackOrderLink').href = `track-order.html?orderId=${order.id}`;
 });
 
 function getName(id) {

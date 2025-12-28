@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisans | Sanskriti Traditional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="artisans-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Sanskriti</a>
+            <ul class="nav-menu">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="artisans.html" class="active">Artisans</a></li>
+                <li><a href="index.html#heritage">Heritage</a></li>
+                <li><a href="index.html#journal">Journal</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="wishlist.html" class="nav-icon" title="Wishlist">❤️</a>
+                <a href="account.html" class="nav-icon" title="Account">👤</a>
+                <a href="cart.html" class="nav-icon" title="Cart">🛒</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="artisans-hero">
+        <div class="hero-content">
+            <h1>The Hands Behind the Heritage</h1>
+            <p>Every piece you see is shaped by skill, patience, and generations of knowledge.</p>
+        </div>
+    </section>
+
+    <main class="container artisans-page">
+        <!-- ARTISANS GRID -->
+        <section class="artisans-section">
+            <h2 class="section-title">Meet Our Artisans</h2>
+            <div id="artisansGrid" class="artisans-grid">
+                <!-- Cards render here -->
+            </div>
+        </section>
+
+        <!-- ARTISAN STORY (Modal / Expandable) -->
+        <div id="storyModal" class="modal hidden">
+            <div class="modal-content">
+                <button type="button" id="closeStory" class="close-btn">✕</button>
+                <div id="storyContent" class="story-content">
+                    <!-- Story renders here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- CRAFT PROCESS SECTION -->
+        <section class="craft-process-section">
+            <h2 class="section-title">The Craft Process</h2>
+            <p class="section-subtitle">Why handcrafted is never mass-produced.</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">🌿</div>
+                    <div class="step-title">Raw Material</div>
+                    <div class="step-desc">Sourced ethically from trusted suppliers across India.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">🔨</div>
+                    <div class="step-title">Preparation</div>
+                    <div class="step-desc">Cleaned, sorted, and prepared with precision and care.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">✋</div>
+                    <div class="step-title">Crafting</div>
+                    <div class="step-desc">Hands, tools, and technique applied with generations of skill.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">✨</div>
+                    <div class="step-title">Finishing</div>
+                    <div class="step-desc">Final touches that transform material into meaning.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT SECTION -->
+        <section class="impact-section">
+            <h2 class="section-title">Our Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number">45+</div>
+                    <div class="impact-label">Artisans Supported</div>
+                    <div class="impact-desc">Direct partnerships with individual craftspeople.</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">8</div>
+                    <div class="impact-label">Traditional Crafts Preserved</div>
+                    <div class="impact-desc">From textiles to pottery, keeping heritage alive.</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">100%</div>
+                    <div class="impact-label">Ethical Sourcing</div>
+                    <div class="impact-desc">No exploitation. Fair wages. Sustainable practices.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOFT CTA SECTION -->
+        <section class="artisan-cta">
+            <div class="cta-card">
+                <h3>When you choose handcrafted, you choose continuity.</h3>
+                <p>Every purchase supports artisans, preserves traditions, and keeps generations-old skills alive.</p>
+                <div class="cta-actions">
+                    <a href="shop.html" class="btn-primary">🛍️ Explore Their Work</a>
+                    <a href="index.html#heritage" class="link-plain">📖 Learn About Indian Crafts</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="artisans.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

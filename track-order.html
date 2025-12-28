@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | Sanskriti Traditional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="track-order-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Sanskriti</a>
+            <ul class="nav-menu">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="index.html#heritage">Heritage</a></li>
+                <li><a href="index.html#artisans">Artisans</a></li>
+                <li><a href="index.html#journal">Journal</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="wishlist.html" class="nav-icon" title="Wishlist">❤️</a>
+                <a href="account.html" class="nav-icon" title="Account">👤</a>
+                <a href="cart.html" class="nav-icon" title="Cart">🛒</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="account.html">My Account</a>
+            <span>/</span>
+            <span>Track Order</span>
+        </div>
+    </div>
+
+    <main class="container track-page">
+        <div id="errorState" class="error-state hidden">
+            <p>Order not found. <a href="account.html" class="link-plain">Back to My Orders</a>.</p>
+        </div>
+
+        <div id="trackingContent">
+            <!-- ORDER HEADER -->
+            <section class="order-header">
+                <div class="header-info">
+                    <div class="order-id" id="orderId">ORD-1234567890</div>
+                    <div class="header-meta">
+                        <span id="orderDate">Dec 28, 2025</span>
+                        <span class="separator">•</span>
+                        <span id="estimatedDelivery">Est. delivery Dec 31, 2025</span>
+                    </div>
+                </div>
+                <div class="header-status">
+                    <span class="status-badge" id="currentStatus">Processing</span>
+                </div>
+            </section>
+
+            <!-- STATUS TIMELINE -->
+            <section class="timeline">
+                <div class="timeline-item" data-status="confirmed">
+                    <div class="timeline-marker">🧵</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Order Confirmed</div>
+                        <div class="timeline-time" id="time-confirmed">Dec 28</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-status="preparing">
+                    <div class="timeline-marker">🧑‍🎨</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">In Preparation</div>
+                        <div class="timeline-time" id="time-preparing">—</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-status="packed">
+                    <div class="timeline-marker">📦</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Packed</div>
+                        <div class="timeline-time" id="time-packed">—</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-status="shipped">
+                    <div class="timeline-marker">🚚</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Shipped</div>
+                        <div class="timeline-time" id="time-shipped">—</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-status="delivered">
+                    <div class="timeline-marker">🏠</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Delivered</div>
+                        <div class="timeline-time" id="time-delivered">—</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SHIPMENT DETAILS (Hidden unless shipped) -->
+            <section id="shipmentSection" class="shipment-details hidden">
+                <div class="section-title">Shipment Details</div>
+                <div class="shipment-info">
+                    <div class="info-row">
+                        <span class="label">Courier</span>
+                        <span class="value" id="courierName">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Tracking Number</span>
+                        <span class="value" id="trackingNumber">—</span>
+                    </div>
+                    <a id="courierLink" href="#" class="btn-secondary" target="_blank" style="display: none;">Track with courier</a>
+                </div>
+            </section>
+
+            <!-- ORDER SUMMARY -->
+            <section class="order-summary">
+                <div class="section-title">Order Summary</div>
+                <div id="summaryItems" class="summary-items"></div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="summaryTotal">₹0</strong>
+                </div>
+            </section>
+
+            <!-- SUPPORT CTA -->
+            <section class="support-section">
+                <div class="support-card">
+                    <h3>Need help with this order?</h3>
+                    <p>We're here to help. Reach out anytime.</p>
+                    <button id="contactSupportBtn" class="btn-primary">📞 Contact Support</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="shop.js"></script>
+    <script src="track-order.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

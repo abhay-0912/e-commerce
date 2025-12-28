@@ -77,7 +77,7 @@ function getStatusClass(status) {
 }
 
 function trackOrder(orderId) {
-    alert(`Track order ${orderId}. (Full tracking page coming next.)`);
+    window.location.href = `track-order.html?orderId=${orderId}`;
 }
 
 function viewOrderDetails(orderId) {

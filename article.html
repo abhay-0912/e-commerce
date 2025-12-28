@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | Sanskriti Traditional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="journal-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Sanskriti</a>
+            <ul class="nav-menu">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="heritage.html">Heritage</a></li>
+                <li><a href="artisans.html">Artisans</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="nav-icon" title="Wishlist">❤️</a>
+                <a href="login.html?redirect=checkout.html" class="nav-icon" title="Account">👤</a>
+                <a href="cart.html" class="nav-icon" title="Cart">🛒</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="journal.html">Journal</a>
+            <span>/</span>
+            <span id="breadcrumbArticle">Article</span>
+        </div>
+    </div>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero" id="articleHero">
+        <div class="article-hero-background"></div>
+        <div class="article-hero-content">
+            <div class="article-category" id="articleCategory">Guide</div>
+            <h1 id="articleTitle">Article Title</h1>
+            <div class="article-meta">
+                <span id="articleAuthor">By Sanskriti</span>
+                <span class="separator">•</span>
+                <span id="articleDate">Dec 28, 2024</span>
+                <span class="separator">•</span>
+                <span id="articleReadTime">5 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <article class="article-content">
+        <div class="container article-container">
+            <div class="article-body" id="articleBody">
+                <!-- Content will be loaded here by journal.js -->
+            </div>
+        </div>
+    </article>
+
+    <!-- RELATED ARTICLES -->
+    <section class="article-related">
+        <div class="container">
+            <h2>Related Reading</h2>
+            <div class="related-articles-grid" id="relatedArticles">
+                <!-- Related articles will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SOFT CTA -->
+    <section class="article-closing-cta">
+        <div class="container">
+            <h2>Deepen your appreciation for handcrafted traditions.</h2>
+            <div class="cta-buttons">
+                <a href="shop.html" class="cta-button cta-primary">🧵 Explore Crafts</a>
+                <a href="heritage.html" class="cta-button cta-secondary">📖 Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Collections</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="heritage.html">Heritage</a></li>
+                        <li><a href="artisans.html">Artisans</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Care Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stories from the studio, direct to your inbox.</p>
+                    <input type="email" placeholder="Your email" class="footer-email">
+                    <button class="footer-subscribe">Subscribe</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sanskriti Traditional. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="journal.js"></script>
+</body>
+</html>

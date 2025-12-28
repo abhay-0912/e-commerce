@@ -1,0 +1,451 @@
+/* ==================== HERITAGE PAGE STYLES ==================== */
+
+/* 1️⃣ HERO SECTION */
+.heritage-hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: var(--navbar-height);
+}
+
+.heritage-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3d2817 0%, #6b4423 50%, #8b5a3c 100%);
+    z-index: -1;
+}
+
+.heritage-hero .hero-headline {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.heritage-hero .hero-subtext {
+    font-size: 1.3rem;
+    color: #f5f1ed;
+    text-align: center;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .heritage-hero {
+        height: 40vh;
+    }
+    
+    .heritage-hero .hero-headline {
+        font-size: 2.2rem;
+    }
+    
+    .heritage-hero .hero-subtext {
+        font-size: 1rem;
+    }
+}
+
+/* 2️⃣ HERITAGE INTRO SECTION */
+.heritage-intro {
+    padding: 6rem 0;
+    background-color: #faf8f5;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #3d2817;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .heritage-intro {
+        padding: 3rem 0;
+    }
+    
+    .intro-text p {
+        font-size: 1rem;
+    }
+}
+
+/* 3️⃣ CRAFT-WISE SECTIONS */
+.heritage-crafts {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.craft-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.craft-block:last-child {
+    margin-bottom: 0;
+}
+
+.craft-block-alt {
+    grid-template-columns: 1fr 1fr;
+}
+
+.craft-block-alt .craft-image {
+    order: 2;
+}
+
+.craft-block-alt .craft-content {
+    order: 1;
+}
+
+.craft-image {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, #f5d5b8 0%, #d4a574 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.craft-image .craft-emoji {
+    font-size: 8rem;
+    opacity: 0.95;
+}
+
+.craft-content h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #3d2817;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.craft-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #6b4423;
+}
+
+.craft-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #3d2817;
+    margin-bottom: 1rem;
+}
+
+.craft-content p strong {
+    font-weight: 600;
+    color: #3d2817;
+}
+
+.craft-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .craft-block {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .craft-block-alt .craft-image {
+        order: 1;
+    }
+    
+    .craft-block-alt .craft-content {
+        order: 2;
+    }
+    
+    .craft-image {
+        height: 300px;
+    }
+    
+    .craft-image .craft-emoji {
+        font-size: 5rem;
+    }
+    
+    .craft-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .craft-content p {
+        font-size: 0.95rem;
+    }
+}
+
+/* 4️⃣ SYMBOLS, MOTIFS & MEANING */
+.heritage-symbols {
+    padding: 6rem 0;
+    background-color: #faf8f5;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #3d2817;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: #6b4423;
+    line-height: 1.6;
+}
+
+.symbols-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.symbol-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.symbol-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.symbol-card .symbol-emoji {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.symbol-card h3 {
+    font-size: 1.3rem;
+    color: #3d2817;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.symbol-card p {
+    font-size: 0.95rem;
+    color: #6b4423;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.symbol-card p strong {
+    color: #3d2817;
+    font-weight: 600;
+}
+
+.symbol-card p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .symbols-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 5️⃣ MODERN CHALLENGES & PRESERVATION */
+.heritage-challenges {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.challenge-card {
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f1ed 100%);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #8b5a3c;
+}
+
+.challenge-card .challenge-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.challenge-card h3 {
+    font-size: 1.2rem;
+    color: #3d2817;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.challenge-card p {
+    font-size: 0.95rem;
+    color: #6b4423;
+    line-height: 1.7;
+}
+
+/* Preservation Section */
+.preservation-section {
+    background: #faf8f5;
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid #e8e1d9;
+}
+
+.preservation-section h3 {
+    font-size: 1.5rem;
+    color: #3d2817;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.preservation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.preservation-item {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.preservation-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: #8b5a3c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.preservation-text {
+    font-size: 0.95rem;
+    color: #6b4423;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .preservation-section {
+        padding: 2rem;
+    }
+}
+
+/* 6️⃣ CLOSING CTA */
+.heritage-closing-cta {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #3d2817 0%, #6b4423 50%, #8b5a3c 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.heritage-closing-cta h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.closing-cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.cta-button.cta-primary {
+    background: #fff;
+    color: #3d2817;
+}
+
+.cta-button.cta-primary:hover {
+    background: #f5f1ed;
+    transform: translateY(-2px);
+}
+
+.cta-button.cta-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.cta-button.cta-secondary:hover {
+    background: #fff;
+    color: #3d2817;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .heritage-closing-cta {
+        padding: 3rem 0;
+    }
+    
+    .heritage-closing-cta h2 {
+        font-size: 1.8rem;
+    }
+    
+    .closing-cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+    }
+}
